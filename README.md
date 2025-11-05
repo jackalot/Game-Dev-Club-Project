@@ -1,39 +1,38 @@
-This is a FGCU Game Dev club collaborative project. 
+# 👽 We Can Fix Him / Are We the Bad Guys?
 
-This project uses the open-source Godot engine and will be a 3D game using 2D assets. The later portion of this game is still being investigated on how to accomplish this feat.
-Game Design Document:
+*A collaborative FGCU Game Dev Club project built with the open-source [Godot Engine](https://godotengine.org/).*
 
-Team: We can fix him/Are we the bad guys?
-Game design document
-Premise
+This project is a **3D game using 2D assets**, exploring a strange bond between a human and an alien after a catastrophic event.  
+The project’s later stages will experiment with integrating 2D assets into a 3D environment.
 
-    • Alien invades scifi facility, kills/maims many
-    • Alien is almost defeated, is weakened
-    • Alien attaches to human it almost killed
-        ◦ symbiotic relationship, keep human alive until alien gets stronger
-    • Character interactions/choices between alien and human
-Choices
-With a romance meter between the human and alien:
-    • Alien takes over human, human dies (alien stronger)
-    • Alien releases human, (medium hearts)
-        ◦ Alien dies
-        ◦ Human dies
-        ◦ They both live
-    • Yaoi – live together (full hearts)
-        ◦ Keep it PG 
-Gameplay loop
-    1) Throw items at enemies
-    2) Enemies drop
-        1) crafting ingredients
-        2) money
-    3) Buy items and upgrades for both the human and alien
-        1) Who ever has more upgrades is stronger
-    4) Healing events
-        1) What you can do during healing events:
-            1) Train (gives a strength boost to whatever you choose)
-            2) Talk to the alien
-                1) Friendly choices 
-                2) Hostile choices (trash talk?)
-                3) Romantic choices
-                    1) If you aren’t familiar with the alien much, your romance meter goes down (awkward)
-                    2) Different options based on how close the alien and human are.
+---
+
+## 🎮 Premise
+
+An alien invades a sci-fi research facility, wreaking havoc on its inhabitants.  
+Just as the alien is about to be destroyed, it latches onto a dying human host to survive.  
+
+Now weakened, the two must coexist in a **symbiotic relationship**—balancing between trust, control, and survival—until the alien regains strength.
+
+---
+
+## 💔 Choice System
+
+Throughout the game, the player’s **choices** influence the relationship between the alien and the human.  
+A **romance meter** tracks their bond, unlocking different endings based on emotional closeness.
+
+**Possible Outcomes:**
+- 💀 **Alien takes over human** → Human dies, alien becomes stronger.
+- 💔 **Alien releases human** →  
+  - Alien dies  
+  - Human dies  
+  - They both live (depends on choices)
+- 💕 **Full hearts (Yaoi ending)** → They live together. *(Keep it PG!)*
+
+---
+
+## 🔁 Core Gameplay Loop
+
+1. **Combat:** Throw items at enemies to defeat them.  
+2. **Loot:** Enemies drop crafting ingredients and money.  
+3. **Upgrade:** Buy items and upgrades
