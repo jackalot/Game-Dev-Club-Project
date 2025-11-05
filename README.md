@@ -27,7 +27,7 @@ A **romance meter** tracks their bond, unlocking different endings based on emot
   - Alien dies  
   - Human dies  
   - They both live (depends on choices)
-- 💕 **Full hearts (Yaoi ending)** → They live together. *(Keep it PG!)*
+- 💕 **Full hearts (Romance ending)** → They live together. *(Keep it PG!)*
 
 ---
 
