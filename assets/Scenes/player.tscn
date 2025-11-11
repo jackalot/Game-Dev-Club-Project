@@ -9,6 +9,6 @@ albedo_texture = ExtResource("1_ogqes")
 
 [node name="Player" type="Node3D"]
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+[node name="Texture plane" type="MeshInstance3D" parent="."]
 material_override = SubResource("StandardMaterial3D_qrc4i")
 mesh = SubResource("PlaneMesh_0o5ai")
