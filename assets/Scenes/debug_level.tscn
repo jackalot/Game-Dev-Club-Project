@@ -23,7 +23,7 @@ albedo_texture = ExtResource("2_b4ois")
 [node name="Player" parent="." instance=ExtResource("1_es4wb")]
 
 [node name="Camera3D" type="Camera3D" parent="Player"]
-transform = Transform3D(1, 0, 0, 0, 0.97258955, 0.23252884, 0, -0.23252884, 0.97258955, -0.24686241, 3.0877843, 4.6636677)
+transform = Transform3D(1, 0, 0, 0, 0.7681718, 0.64024377, 0, -0.64024377, 0.7681718, 0.92675996, 4.2596292, 3.9391274)
 
 [node name="Level Geometry" type="Node2D" parent="."]
 position = Vector2(0, -1)
@@ -71,5 +71,6 @@ skeleton = NodePath("../..")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Level Geometry/MeshInstance3D/StaticBody3D"]
 shape = SubResource("BoxShape3D_tetbm")
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.44754058, 0.89426357, 0, -0.89426357, 0.44754058, -0.7427193, 13.517527, 20.06723)
+[node name="DirectionalLight3D2" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.97723216, 0.15799566, -0.14161494, 1.0907887e-08, 0.66745, 0.7446546, 0.2121731, -0.72770035, 0.65225357, -10.048359, 10, 10)
+shadow_enabled = true
