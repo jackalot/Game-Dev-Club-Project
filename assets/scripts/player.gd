@@ -39,7 +39,7 @@ func _physics_process(delta):
 	# Handling climbing when touching a wall
 	if is_on_wall():
 		if Input.is_action_pressed("Move_Forward"):
-			vertical_velocity = -climb_speed  # Climb up
+			vertical_velocity = climb_speed  # Climb up
 		elif Input.is_action_pressed("Move_Backward"):
 			vertical_velocity = climb_speed  # Optionally move down
 
