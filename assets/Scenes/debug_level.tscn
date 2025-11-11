@@ -23,9 +23,10 @@ albedo_texture = ExtResource("2_b4ois")
 [node name="Player" parent="." instance=ExtResource("1_es4wb")]
 
 [node name="Camera3D" type="Camera3D" parent="Player"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.24686241, 0.9634671, 2.7788706)
+transform = Transform3D(1, 0, 0, 0, 0.97258955, 0.23252884, 0, -0.23252884, 0.97258955, -0.24686241, 3.0877843, 4.6636677)
 
 [node name="Level Geometry" type="Node2D" parent="."]
+position = Vector2(0, -1)
 
 [node name="MeshInstance3D3" type="MeshInstance3D" parent="Level Geometry"]
 transform = Transform3D(-82.85929, 0, 0, 0, 1, 0, 0, 0, -28.769348, 0, -6.4039516, 0)
