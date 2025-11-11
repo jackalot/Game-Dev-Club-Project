@@ -50,6 +50,17 @@ skeleton = NodePath("../MeshInstance3D")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Level Geometry/MeshInstance3D2/StaticBody3D"]
 shape = SubResource("BoxShape3D_tetbm")
 
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Level Geometry/MeshInstance3D2"]
+transform = Transform3D(5.8102403, 0, 0, 0, 0.8035377, 0, 0, 0, -4.445765, -0.06014883, -11.49923, -1.08281)
+material_override = SubResource("StandardMaterial3D_a0qyn")
+mesh = SubResource("BoxMesh_es4wb")
+skeleton = NodePath("../MeshInstance3D")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Level Geometry/MeshInstance3D2/MeshInstance3D2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Level Geometry/MeshInstance3D2/MeshInstance3D2/StaticBody3D"]
+shape = SubResource("BoxShape3D_tetbm")
+
 [node name="MeshInstance3D4" type="MeshInstance3D" parent="Level Geometry"]
 transform = Transform3D(12.452846, 0, 0, 0, 5.78619, 0, 0, 0, 8.785541, -0.23104477, 0.04331255, -17.53191)
 material_override = SubResource("StandardMaterial3D_48nw5")
@@ -71,6 +82,16 @@ skeleton = NodePath("../..")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Level Geometry/MeshInstance3D/StaticBody3D"]
 shape = SubResource("BoxShape3D_tetbm")
 
-[node name="DirectionalLight3D2" type="DirectionalLight3D" parent="."]
-transform = Transform3D(0.97723216, 0.15799566, -0.14161494, 1.0907887e-08, 0.66745, 0.7446546, 0.2121731, -0.72770035, 0.65225357, -10.048359, 10, 10)
+[node name="SpotLight3D2" type="SpotLight3D" parent="."]
+transform = Transform3D(0.9711285, 0.2385426, 0.0026325858, 0.070431344, -0.29724094, 0.9522013, 0.22792311, -0.9245243, -0.30546004, -21.43859, 7.970743, -9.943398)
+light_energy = 16.0
 shadow_enabled = true
+spot_range = 47.239857
+spot_angle = 43.59375
+
+[node name="SpotLight3D" type="SpotLight3D" parent="."]
+transform = Transform3D(0.97723216, 0.15799566, -0.14161494, 1.0907887e-08, 0.66745, 0.7446546, 0.2121731, -0.72770035, 0.65225357, -3.8063397, 5.1039705, 10)
+light_energy = 16.0
+shadow_enabled = true
+spot_range = 56.023094
+spot_angle = 43.59375
