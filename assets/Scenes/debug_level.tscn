@@ -1,3 +1,13 @@
-[gd_scene format=3 uid="uid://dp05i45oo3l2k"]
+[gd_scene load_steps=3 format=3 uid="uid://dp05i45oo3l2k"]
+
+[ext_resource type="PackedScene" uid="uid://dl2xpbavycnmk" path="res://assets/Scenes/player.tscn" id="1_es4wb"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_es4wb"]
 
 [node name="Debug Level" type="Node3D"]
+
+[node name="Player" parent="." instance=ExtResource("1_es4wb")]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.6009879, 0)
+mesh = SubResource("BoxMesh_es4wb")
