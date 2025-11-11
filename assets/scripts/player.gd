@@ -13,12 +13,12 @@ func _physics_process(delta):
 
 	# We check for each move input and update the direction accordingly.
 	if Input.is_action_pressed("Move_Right"):
-		direction.x += 1
+		direction.x += 1 * delta
 	if Input.is_action_pressed("Move_Left"):
-		direction.x -= 1
+		direction.x -= 1 * delta
 	if Input.is_action_pressed("Move_Backward"):
 		# Notice how we are working with the vector's x and z axes.
 		# In 3D, the XZ plane is the ground plane.
-		direction.z += 1
+		direction.z += 1 * delta
 	if Input.is_action_pressed("Move_Forward"):
-		direction.z -= 1
+		direction.z -= 1 * delta
