@@ -1,16 +1,20 @@
-[gd_scene load_steps=7 format=3 uid="uid://dp05i45oo3l2k"]
+[gd_scene load_steps=9 format=3 uid="uid://dp05i45oo3l2k"]
 
 [ext_resource type="PackedScene" uid="uid://dl2xpbavycnmk" path="res://assets/Scenes/player.tscn" id="1_es4wb"]
 [ext_resource type="Texture2D" uid="uid://ckqhodt32ut1u" path="res://assets/textures/debug Textures/RainbowDebugTexture.png" id="2_b4ois"]
+[ext_resource type="Texture2D" uid="uid://dksyyfaelo728" path="res://assets/textures/debug Textures/tex_DebugAlignment.png" id="2_tetbm"]
 [ext_resource type="Texture2D" uid="uid://dux71b7uken45" path="res://assets/textures/debug Textures/tex_DebugGrid.png" id="3_tetbm"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_48nw5"]
-albedo_texture = ExtResource("2_b4ois")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h2o6k"]
+albedo_texture = ExtResource("2_tetbm")
 
 [sub_resource type="BoxMesh" id="BoxMesh_es4wb"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a0qyn"]
 albedo_texture = ExtResource("3_tetbm")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_48nw5"]
+albedo_texture = ExtResource("2_b4ois")
 
 [node name="Debug Level" type="Node3D"]
 
@@ -19,12 +23,19 @@ albedo_texture = ExtResource("3_tetbm")
 [node name="Camera3D" type="Camera3D" parent="Player"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.24686241, 0.9634671, 2.7788706)
 
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="."]
+transform = Transform3D(-82.85929, 0, 0, 0, 1, 0, 0, 0, -28.769348, 0, -6.4039516, 0)
+material_override = SubResource("StandardMaterial3D_h2o6k")
+mesh = SubResource("BoxMesh_es4wb")
+skeleton = NodePath("../MeshInstance3D")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(16.374945, 0, 0, 0, 1, 0, 0, 0, -46.904747, 0, -3.2019758, 0)
+material_override = SubResource("StandardMaterial3D_a0qyn")
+mesh = SubResource("BoxMesh_es4wb")
+skeleton = NodePath("../MeshInstance3D")
+
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.6009879, 0)
 material_override = SubResource("StandardMaterial3D_48nw5")
-mesh = SubResource("BoxMesh_es4wb")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="MeshInstance3D"]
-transform = Transform3D(16.374945, 0, 0, 0, 1, 0, 0, 0, -46.904747, 0, -1.6009879, 0)
-material_override = SubResource("StandardMaterial3D_a0qyn")
 mesh = SubResource("BoxMesh_es4wb")
