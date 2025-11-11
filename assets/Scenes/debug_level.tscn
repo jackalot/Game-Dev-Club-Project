@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://dp05i45oo3l2k"]
+[gd_scene load_steps=10 format=3 uid="uid://dp05i45oo3l2k"]
 
 [ext_resource type="PackedScene" uid="uid://dl2xpbavycnmk" path="res://assets/Scenes/player.tscn" id="1_es4wb"]
 [ext_resource type="Texture2D" uid="uid://ckqhodt32ut1u" path="res://assets/textures/debug Textures/RainbowDebugTexture.png" id="2_b4ois"]
@@ -9,6 +9,8 @@
 albedo_texture = ExtResource("2_tetbm")
 
 [sub_resource type="BoxMesh" id="BoxMesh_es4wb"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_tetbm"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a0qyn"]
 albedo_texture = ExtResource("3_tetbm")
@@ -29,13 +31,28 @@ material_override = SubResource("StandardMaterial3D_h2o6k")
 mesh = SubResource("BoxMesh_es4wb")
 skeleton = NodePath("../MeshInstance3D")
 
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D3"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D3/StaticBody3D"]
+shape = SubResource("BoxShape3D_tetbm")
+
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
 transform = Transform3D(16.374945, 0, 0, 0, 1, 0, 0, 0, -46.904747, 0, -3.2019758, 0)
 material_override = SubResource("StandardMaterial3D_a0qyn")
 mesh = SubResource("BoxMesh_es4wb")
 skeleton = NodePath("../MeshInstance3D")
 
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D2/StaticBody3D"]
+shape = SubResource("BoxShape3D_tetbm")
+
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.6009879, 0)
 material_override = SubResource("StandardMaterial3D_48nw5")
 mesh = SubResource("BoxMesh_es4wb")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D"]
+shape = SubResource("BoxShape3D_tetbm")
