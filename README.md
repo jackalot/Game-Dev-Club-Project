@@ -1,38 +1,86 @@
-# 👽 We Can Fix Him / Are We the Bad Guys?
+# Team: We Can Fix Him / Are We the Bad Guys?
 
-*A collaborative FGCU Game Dev Club project built with the open-source [Godot Engine](https://godotengine.org/).*
+## Game Design Document
 
-This project is a **3D game using 2D assets**, exploring a strange bond between a human and an alien after a catastrophic event.  
-The project’s later stages will experiment with integrating 2D assets into a 3D environment.
-
----
-
-## 🎮 Premise
-
-An alien invades a sci-fi research facility, wreaking havoc on its inhabitants.  
-Just as the alien is about to be destroyed, it latches onto a dying human host to survive.  
-
-Now weakened, the two must coexist in a **symbiotic relationship**—balancing between trust, control, and survival—until the alien regains strength.
+### Premise
+- **Alien invasion**: An alien invades a sci-fi facility, causing chaos and destruction.
+- **Alien confrontation**: The alien is nearly defeated and weakened.
+- **Symbiotic relationship**: The alien attaches itself to a human it almost killed to keep the human alive until it regains strength.
+- **Character interactions**: Players will navigate choices between the alien and the human.
 
 ---
 
-## 💔 Choice System
-
-Throughout the game, the player’s **choices** influence the relationship between the alien and the human.  
-A **romance meter** tracks their bond, unlocking different endings based on emotional closeness.
-
-**Possible Outcomes:**
-- 💀 **Alien takes over human** → Human dies, alien becomes stronger.
-- 💔 **Alien releases human** →  
-  - Alien dies  
-  - Human dies  
-  - They both live (depends on choices)
-- 💕 **Full hearts (Romance ending)** → They live together. *(Keep it PG!)*
+### Game Story Introduction
+- **The McGuffin**: Aliens require the McGuffin for their plans.
+- **The heist**: The human protagonist steals the McGuffin.
+- **Bounty hunt**: The alien protagonist embarks on a bounty hunt to retrieve the human.
+- **Alliance formed**: Circumstances lead to an unlikely alliance between the alien and human.
+- **Crossover conflict**: The alien race and human race unite against the protagonists, likely due to the McGuffin.
+- **Undecided events**: Key plot points still to be determined.
+- **Ending reached**: The story culminates in a decisive conclusion.
 
 ---
 
-## 🔁 Core Gameplay Loop
+### Choices & Endings
 
-1. **Combat:** Throw items at enemies to defeat them.  
-2. **Loot:** Enemies drop crafting ingredients and money.  
-3. **Upgrade:** Buy items and upgrades
+#### Ending Variables
+- **Strength (S)**
+  - Equal strength
+  - Unequal strength:
+	- Human is stronger
+	- Alien is stronger
+
+- **Romance (R)**
+  - None
+  - Low
+  - Medium
+  - High
+
+#### Possible Endings (in order of specificity)
+- **True End**
+  - Equal Strength (S)
+  - High Romance (R)
+
+- **Pet End**
+  - **Pet End A:**
+	- Human Strength Higher
+	- High Romance
+  - **Pet End B:**
+	- Alien Strength Higher
+	- High Romance
+
+- **Bad End**
+  - **Bad End A:**
+	- Human Strength Higher
+	- No Romance
+  - **Bad End B:**
+	- Alien Strength Higher
+	- No Romance
+
+- **Duel End**
+  - Equal Strength
+  - No Romance
+
+- **Neutral End**
+  - Anything not contained in the former categories.
+
+---
+
+### Gameplay Loop
+1. **Throw items** at enemies.
+2. **Enemies drop**:
+	- Crafting ingredients
+	- Money
+3. **Purchase items and upgrades** for both the human and alien:
+   - The character with more upgrades becomes stronger.
+4. **Healing events**:
+   - During healing, players can:
+	 1. **Train** (provides a strength boost to the selected character).
+	 2. **Engage in conversations** with the alien:
+		- Friendly choices
+		- Hostile choices (trash talk?)
+		- Romantic choices
+		  - If unfamiliar with the alien, the romance meter decreases (awkward).
+		  - Various options based on the relationship status between the alien and human.
+
+---
