@@ -11,6 +11,7 @@ config_version=5
 [application]
 
 config/name="Game Dev club project"
+run/main_scene="uid://dp05i45oo3l2k"
 config/features=PackedStringArray("4.5", "Mobile")
 config/icon="res://assets/icon.svg"
 
