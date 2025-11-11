@@ -50,6 +50,16 @@ skeleton = NodePath("../MeshInstance3D")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Level Geometry/MeshInstance3D2/StaticBody3D"]
 shape = SubResource("BoxShape3D_tetbm")
 
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="Level Geometry"]
+transform = Transform3D(12.452846, 0, 0, 0, 5.78619, 0, 0, 0, 8.785541, -0.23104477, 0.04331255, -17.53191)
+material_override = SubResource("StandardMaterial3D_48nw5")
+mesh = SubResource("BoxMesh_es4wb")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Level Geometry/MeshInstance3D4"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Level Geometry/MeshInstance3D4/StaticBody3D"]
+shape = SubResource("BoxShape3D_tetbm")
+
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Level Geometry"]
 transform = Transform3D(15.986341, 0, 0, 0, 1, 0, 0, 0, 2.9640412, -0.7396381, -2.2720509, -7.5797358)
 material_override = SubResource("StandardMaterial3D_48nw5")
