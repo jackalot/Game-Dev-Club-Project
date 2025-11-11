@@ -25,34 +25,37 @@ albedo_texture = ExtResource("2_b4ois")
 [node name="Camera3D" type="Camera3D" parent="Player"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.24686241, 0.9634671, 2.7788706)
 
-[node name="MeshInstance3D3" type="MeshInstance3D" parent="."]
+[node name="Level Geometry" type="Node2D" parent="."]
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="Level Geometry"]
 transform = Transform3D(-82.85929, 0, 0, 0, 1, 0, 0, 0, -28.769348, 0, -6.4039516, 0)
 material_override = SubResource("StandardMaterial3D_h2o6k")
 mesh = SubResource("BoxMesh_es4wb")
 skeleton = NodePath("../MeshInstance3D")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D3"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Level Geometry/MeshInstance3D3"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D3/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Level Geometry/MeshInstance3D3/StaticBody3D"]
 shape = SubResource("BoxShape3D_tetbm")
 
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Level Geometry"]
 transform = Transform3D(16.374945, 0, 0, 0, 1, 0, 0, 0, -46.904747, 0, -3.2019758, 0)
 material_override = SubResource("StandardMaterial3D_a0qyn")
 mesh = SubResource("BoxMesh_es4wb")
 skeleton = NodePath("../MeshInstance3D")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D2"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Level Geometry/MeshInstance3D2"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D2/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Level Geometry/MeshInstance3D2/StaticBody3D"]
 shape = SubResource("BoxShape3D_tetbm")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Level Geometry"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.6009879, 0)
 material_override = SubResource("StandardMaterial3D_48nw5")
 mesh = SubResource("BoxMesh_es4wb")
+skeleton = NodePath("../..")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Level Geometry/MeshInstance3D"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Level Geometry/MeshInstance3D/StaticBody3D"]
 shape = SubResource("BoxShape3D_tetbm")
