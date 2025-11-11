@@ -27,8 +27,8 @@
 - **Strength (S)**
   - Equal strength
   - Unequal strength:
-    - Human is stronger
-    - Alien is stronger
+	- Human is stronger
+	- Alien is stronger
 
 - **Romance (R)**
   - None
@@ -43,19 +43,19 @@
 
 - **Pet End**
   - **Pet End A:**
-    - Human Strength Higher
-    - High Romance
+	- Human Strength Higher
+	- High Romance
   - **Pet End B:**
-    - Alien Strength Higher
-    - High Romance
+	- Alien Strength Higher
+	- High Romance
 
 - **Bad End**
   - **Bad End A:**
-    - Human Strength Higher
-    - No Romance
+	- Human Strength Higher
+	- No Romance
   - **Bad End B:**
-    - Alien Strength Higher
-    - No Romance
+	- Alien Strength Higher
+	- No Romance
 
 - **Duel End**
   - Equal Strength
@@ -69,19 +69,18 @@
 ### Gameplay Loop
 1. **Throw items** at enemies.
 2. **Enemies drop**:
-    - Crafting ingredients
-    - Money
+	- Crafting ingredients
+	- Money
 3. **Purchase items and upgrades** for both the human and alien:
    - The character with more upgrades becomes stronger.
 4. **Healing events**:
    - During healing, players can:
-     1. **Train** (provides a strength boost to the selected character).
-     2. **Engage in conversations** with the alien:
-        - Friendly choices
-        - Hostile choices (trash talk?)
-        - Romantic choices
-          - If unfamiliar with the alien, the romance meter decreases (awkward).
-          - Various options based on the relationship status between the alien and human.
+	 1. **Train** (provides a strength boost to the selected character).
+	 2. **Engage in conversations** with the alien:
+		- Friendly choices
+		- Hostile choices (trash talk?)
+		- Romantic choices
+		  - If unfamiliar with the alien, the romance meter decreases (awkward).
+		  - Various options based on the relationship status between the alien and human.
 
 ---
-
