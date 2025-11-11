@@ -32,7 +32,9 @@ func _physics_process(delta):
 	if(!is_on_floor()):
 		vertical_velocity -= fall_acceleration * delta  # Apply falling acceleration
 	target_velocity.y = vertical_velocity  # Set vertical velocity
-
+	
+	if(is_on_wall()):
+		print("we hit a wall")
 	# Move the character.
 	velocity = target_velocity  # Assign the target velocity to the character's velocity
 	move_and_slide()  # Call without parameters
