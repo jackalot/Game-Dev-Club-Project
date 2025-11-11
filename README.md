@@ -72,4 +72,16 @@
     - Crafting ingredients
     - Money
 3. **Purchase items and upgrades** for both the human and alien:
-   -
+   - The character with more upgrades becomes stronger.
+4. **Healing events**:
+   - During healing, players can:
+     1. **Train** (provides a strength boost to the selected character).
+     2. **Engage in conversations** with the alien:
+        - Friendly choices
+        - Hostile choices (trash talk?)
+        - Romantic choices
+          - If unfamiliar with the alien, the romance meter decreases (awkward).
+          - Various options based on the relationship status between the alien and human.
+
+---
+
