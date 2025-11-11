@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://dl2xpbavycnmk"]
+[gd_scene load_steps=5 format=3 uid="uid://dl2xpbavycnmk"]
 
 [ext_resource type="Texture2D" uid="uid://bxxgab0stlrfs" path="res://assets/icon.svg" id="1_ogqes"]
 
@@ -7,9 +7,16 @@ albedo_texture = ExtResource("1_ogqes")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_0o5ai"]
 
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ogqes"]
+radius = 1.0043945
+height = 2.008789
+
 [node name="Player" type="CharacterBody3D"]
 
 [node name="Texture plane" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
 material_override = SubResource("StandardMaterial3D_qrc4i")
 mesh = SubResource("PlaneMesh_0o5ai")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_ogqes")
