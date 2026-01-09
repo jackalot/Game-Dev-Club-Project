@@ -1,0 +1,57 @@
+GitHub Copilot Chat Assistant
+
+# Team: We can fix him / Are we the bad guys? — Game Writing Document
+
+## Premise
+- Alien invades sci‑fi facility, kills/maims many  
+- Alien is almost defeated, is weakened  
+- Alien attaches to a human it almost killed  
+  - Symbiotic relationship: alien keeps human alive until alien gets stronger  
+- Character interactions and choices between alien and human
+
+## Game story introduction
+- Aliens need the McGuffin  
+- Human protagonist steals the McGuffin  
+- Alien protagonist bounty-hunts the human protagonist  
+- Something causes Alien & Human to team up  
+- Something causes alien race & human race to unite against the protagonists (probably the McGuffin)  
+- (undecided events)  
+- Ending reached
+
+## Choices & Endings
+
+### Ending Variables
+- Strength (S)
+  - Equal strength  
+  - Unequal strength
+    - Human is stronger
+    - Alien is stronger
+- Romance (R)
+  - None
+  - Low
+  - Medium
+  - High
+
+### Possible Endings (in order of specificity)
+- True End
+  - Equal S
+  - High R
+- Pet End
+  - Pet End A
+    - Human S higher
+    - High R
+  - Pet End B
+    - Alien S higher
+    - High R
+- Bad End
+  - Bad End A
+    - Human S higher
+    - No R
+  - Bad End B
+    - Alien S higher
+    - No R
+- Duel End
+  - Equal S
+  - No R
+- Neutral End
+  - Anything not contained in the former

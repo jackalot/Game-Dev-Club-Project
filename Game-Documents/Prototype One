@@ -1,0 +1,143 @@
+Vertical Slice: The first room
+Goal of the Slice
+Prove that:
+    • Crawling + throwing is fun
+    • Vertical risk (towers) creates meaningful choices
+    • Stealth vs chaos affects outcomes
+    • Healing events reinforce player behavior
+If this works, the rest of the game will work.
+
+1. Level Layout (One Screen + Vertical Space)
+Room Structure
+    • Floor path (safe):
+        ◦ Low cover
+        ◦ Grass patches (extra stealth)
+    • One tower (optional):
+        ◦ 2–3 player-heights tall
+        ◦ One ladder / climbable surface
+    • Exit door on far side
+    • Healing room immediately after
+
+2. Enemies (Only 2 Types)
+Enemy A: Floor Patrol
+    • Patrols left ↔ right
+    • Medium vision cone
+    • Weak to stealth throws
+    • Awareness states:
+        ◦ Unaware → Suspicious → Alerted
+Enemy B: Tower Sentry
+    • Stationary on top of tower
+    • Long vision cone
+    • Poor awareness directly below
+    • Can knock player off tower if Alerted
+    • Falls and dies if pushed or stunned
+
+3. Player Abilities (Locked for Slice)
+Movement
+    • Crawl (default)
+    • Climb tower
+Crawl Rules
+    • Quiet
+    • Can throw items
+    • Harder to detect
+Climb Rules
+    • More visible
+    • Cannot throw
+    • Can be knocked off
+    • Falling:
+        ◦ Deals damage
+        ◦ Alerts nearby enemies
+
+4. Items (Keep It Minimal)
+Throwable Items (3 Total)
+    1. Small Junk
+        ◦ Quiet
+        ◦ Low damage
+        ◦ Good for distractions
+    2. Heavy Scrap
+        ◦ Loud
+        ◦ High damage
+        ◦ Can knock enemies off towers
+    3. Bottle
+        ◦ Medium noise
+        ◦ Shatters on impact
+        ◦ Causes Suspicious state
+Items are placed:
+    • 2 on the floor
+    • 1 near the tower base
+
+5. Stealth Rules (Explicit)
+    • Enemy hit while Unaware:
+        ◦ Instant kill OR stun
+        ◦ Bonus money drop
+    • Killing tower enemy without alert:
+        ◦ Extra crafting ingredient
+    • Alerting enemies:
+        ◦ Harder fight
+        ◦ Slightly better money drop
+This makes stealth a strategic choice.
+
+6. Resource Drops (Small Numbers)
+Floor Enemy Drops
+    • 5 money
+    • 1 ingredient (50% chance)
+Tower Enemy Drops
+    • 8 money
+    • 1 ingredient (guaranteed if stealth killed)
+This reinforces vertical risk.
+
+7. Decision Paths (What the Player Learns)
+Path 1: Safe Crawl
+    • Avoid tower
+    • Kill floor enemy quietly
+    • Fewer rewards
+    • Low risk
+Path 2: Risky Climb
+    • Climb tower
+    • Take out sentry
+    • Higher reward
+    • Risk of fall and alert
+Both are valid.
+
+8. Healing Event (Immediately After)
+Healing Event: “Catch Your Breath”
+Choices:
+    1. Train
+        ◦ Choose:
+            ▪ Human strength
+            ▪ Alien strength
+        ◦ No dialogue
+    2. Talk to Alien
+        ◦ Friendly
+            ▪ +Relationship
+        ◦ Hostile
+            ▪ +Minor combat buff next room
+            ▪ −Relationship
+        ◦ Romantic (locked unless relationship ≥ threshold)
+            ▪ If attempted too early → awkward → −Relationship
+Dialogue text can be 1–2 lines only.
+
+9. Success Criteria (Very Important)
+The slice is successful if:
+    • Players understand:
+        ◦ Crawling = safety
+        ◦ Towers = risk + reward
+    • Players choose whether to climb
+    • Players notice better rewards from stealth
+    • Healing choices feel connected to playstyle
+If players ignore towers or don’t notice rewards, redesign before adding content.
+
+10. What NOT to Include
+Do not add:
+    • More enemies
+    • More items
+    • More dialogue
+    • More rooms
+This slice is about clarity, not quantity.
+
+11. What to Build First (Order)
+    1. Movement (crawl + climb)
+    2. One enemy with awareness states
+    3. Throwing items
+    4. Tower interaction
+    5. Healing event UI
