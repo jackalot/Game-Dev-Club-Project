@@ -1,0 +1,165 @@
+# Team: We can fix him / Are we the bad guys? — Game Design Document
+
+## 1. High-Level Game Pillars
+> Rule: if a feature doesn’t reinforce a pillar, it’s cut or reworked.
+
+Game Pillars
+- Floor-level stealth and survival
+- Risk–reward verticality (towers)
+- Throw-based combat
+- Human vs Alien power tension
+- Relationship-driven recovery (healing events)
+
+---
+
+## 2. Core Gameplay Loop (One Pass Only)
+Keep this short and readable.
+
+Core Loop
+1. Crawl through hostile area
+2. Choose stealth or chaos
+3. Defeat / bypass enemies with thrown items
+4. Collect drops (money & ingredients)
+5. Spend resources on upgrades
+6. Recover and make relationship choices
+7. Repeat with higher risk
+
+Everything else plugs into this.
+
+---
+
+## 3. Player Systems (What the Player Can Do)
+
+### 3.1 Movement System
+States
+- Crawling (default)
+- Climbing (towers)
+
+Design Rule  
+The floor is safe. Height is power. Power costs risk.
+
+Crawling
+- Low visibility to enemies
+- Can throw items
+- Quiet movement
+- Safe positioning
+
+Climbing
+- More visible
+- Cannot throw items
+- Can be knocked off
+- Falling causes damage + alert
+
+### 3.2 Verticality & Towers
+Purpose
+- Provide stealth positioning
+- High-risk, high-reward encounters
+
+Tower Interactions
+- Enemies may:
+  - Spot player more easily
+  - Knock player off
+  - Be pushed or dropped for instant kills
+- Player gains:
+  - Better stealth angles
+  - Bonus drops for tower takedowns
+
+### 3.3 Combat & Throwing
+- Core combat method
+- Supports:
+  - Silent takedowns
+  - Loud combat engagement
+- First strike bonuses when enemy is Unaware
+
+---
+
+## 4. Dual-Character System (Human vs Alien)
+
+### 4.1 Upgrade Economy
+- Resources spent on either Human or Alien
+- Whichever has more upgrades becomes “stronger”
+- Strength changes how encounters are solved
+
+### 4.2 Movement Identity (Climbing Example)
+**Human**
+- Slower, quieter climbing
+- Better balance
+- Better stealth positioning
+
+**Alien**
+- Faster climbing
+- Louder, more visible
+- Can rip parts of towers
+- Can survive falls
+
+This reinforces player choice without new mechanics.
+
+---
+
+## 5. Enemy Systems
+
+### 5.1 Awareness States
+Enemies exist in one of three states:
+
+1. Unaware
+   - Normal patrol
+   - Vulnerable to stealth kills
+2. Suspicious
+   - Investigates noise or movement
+3. Alerted
+   - Full combat behavior
+   - Calls allies
+
+### 5.2 Tower Enemy Behavior
+- Long vision cones
+- Weak awareness directly below
+- Vulnerable from behind or above
+- Can fall when hit
+
+These enemies define vertical encounters.
+
+---
+
+## 6. Progression & Economy
+
+### 6.1 Enemy Drops
+- Money
+- Crafting ingredients
+
+Drop quality may be influenced by:
+- Stealth vs chaos
+- Tower takedowns
+- Alert level
+
+### 6.2 Shops & Upgrades
+- Spend resources on:
+  - Human upgrades
+  - Alien upgrades
+- Creates ongoing tension and identity
+
+---
+
+## 7. Healing Events (Between-Runs System)
+
+### 7.1 Purpose
+- Restore health
+- Develop relationship
+- Modify future runs
+
+### 7.2 Healing Event Choices
+**Train**
+- Boost a chosen stat
+- No relationship gain
+
+**Talk to Alien**
+
+Dialogue Types
+- Friendly → relationship up
+- Hostile → short-term benefit, long-term risk
+- Romantic → high risk / high reward
+
+Romance Rules
+- Low familiarity → awkward → meter decreases
+- Options unlock based on relationship level
+
+---
