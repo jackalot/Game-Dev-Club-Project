@@ -1,0 +1,80 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.5.2 Chrome/142.0.7444.265 Electron/39.6.1 Safari/537.36" version="29.5.2">
+  <diagram name="Page-1" id="-gYadovbRV-NTxJO_8VH">
+    <mxGraphModel dx="1833" dy="581" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="Z8KdfXZ4dTNY4fTqcH6M-5" edge="1" parent="1" source="Z8KdfXZ4dTNY4fTqcH6M-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="Z8KdfXZ4dTNY4fTqcH6M-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Z8KdfXZ4dTNY4fTqcH6M-6" connectable="0" parent="Z8KdfXZ4dTNY4fTqcH6M-5" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Any movement input pressed." vertex="1">
+          <mxGeometry relative="1" x="-0.18" y="1" as="geometry">
+            <mxPoint x="-22" y="-1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Z8KdfXZ4dTNY4fTqcH6M-7" edge="1" parent="1" source="Z8KdfXZ4dTNY4fTqcH6M-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="Z8KdfXZ4dTNY4fTqcH6M-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Z8KdfXZ4dTNY4fTqcH6M-8" connectable="0" parent="Z8KdfXZ4dTNY4fTqcH6M-7" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Player is not on the floor" vertex="1">
+          <mxGeometry relative="1" x="-0.1964" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Z8KdfXZ4dTNY4fTqcH6M-1" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" value="IDLE" vertex="1">
+          <mxGeometry height="80" width="80" x="260" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="Z8KdfXZ4dTNY4fTqcH6M-9" edge="1" parent="1" source="Z8KdfXZ4dTNY4fTqcH6M-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0;exitDx=0;exitDy=0;entryX=1;entryY=1;entryDx=0;entryDy=0;curved=1;" target="Z8KdfXZ4dTNY4fTqcH6M-1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="380" y="322" />
+              <mxPoint x="380" y="188" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Z8KdfXZ4dTNY4fTqcH6M-10" connectable="0" parent="Z8KdfXZ4dTNY4fTqcH6M-9" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Player is on the floor" vertex="1">
+          <mxGeometry relative="1" x="-0.0809" y="-2" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Z8KdfXZ4dTNY4fTqcH6M-2" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" value="Falling" vertex="1">
+          <mxGeometry height="80" width="80" x="260" y="310" as="geometry" />
+        </mxCell>
+        <mxCell id="Z8KdfXZ4dTNY4fTqcH6M-11" edge="1" parent="1" source="Z8KdfXZ4dTNY4fTqcH6M-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;curved=1;" target="Z8KdfXZ4dTNY4fTqcH6M-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Z8KdfXZ4dTNY4fTqcH6M-12" connectable="0" parent="Z8KdfXZ4dTNY4fTqcH6M-11" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Player is not on the floor" vertex="1">
+          <mxGeometry relative="1" x="-0.3782" y="-36" as="geometry">
+            <mxPoint x="96" y="-8" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Z8KdfXZ4dTNY4fTqcH6M-17" edge="1" parent="1" source="Z8KdfXZ4dTNY4fTqcH6M-3" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="Z8KdfXZ4dTNY4fTqcH6M-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Z8KdfXZ4dTNY4fTqcH6M-18" connectable="0" parent="Z8KdfXZ4dTNY4fTqcH6M-17" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Player is on the floor&lt;br&gt;OR&lt;br&gt;Player can&#39;t climb" vertex="1">
+          <mxGeometry relative="1" x="-0.0229" y="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Z8KdfXZ4dTNY4fTqcH6M-3" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" value="Climbing" vertex="1">
+          <mxGeometry height="80" width="80" x="480" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="Z8KdfXZ4dTNY4fTqcH6M-4" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" value="Crawling" vertex="1">
+          <mxGeometry height="80" width="80" x="-10" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="Z8KdfXZ4dTNY4fTqcH6M-15" edge="1" parent="1" source="Z8KdfXZ4dTNY4fTqcH6M-4" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.465;entryY=-0.012;entryDx=0;entryDy=0;entryPerimeter=0;" target="Z8KdfXZ4dTNY4fTqcH6M-3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="30" y="80" />
+              <mxPoint x="517" y="80" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Z8KdfXZ4dTNY4fTqcH6M-16" connectable="0" parent="Z8KdfXZ4dTNY4fTqcH6M-15" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Player is against a climbable wall" vertex="1">
+          <mxGeometry relative="1" x="-0.0195" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
