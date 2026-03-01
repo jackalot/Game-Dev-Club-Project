@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://dl2xpbavycnmk"]
 
-[ext_resource type="Script" uid="uid://b8ryy2i73it2t" path="res://assets/scripts/Player/player.gd" id="1_qrc4i"]
+[ext_resource type="Script" uid="uid://b8ryy2i73it2t" path="res://assets/scripts/Player/player.gd" id="1_3yorv"]
 [ext_resource type="PackedScene" uid="uid://dnomjlq45576p" path="res://assets/Scenes/texture_plane.tscn" id="2_qrc4i"]
 [ext_resource type="PackedScene" uid="uid://d3ikwqx47hg2x" path="res://assets/Scenes/StateMachine/entity_state_machine.tscn" id="3_hkmy7"]
 [ext_resource type="PackedScene" uid="uid://cs2jcmfdny23q" path="res://assets/Scenes/Character Scenes/MovementStateMachine/idle.tscn" id="4_8o1d6"]
@@ -13,7 +13,7 @@ radius = 1.0043945
 height = 2.008789
 
 [node name="Player" type="CharacterBody3D" groups=["Player"]]
-script = ExtResource("1_qrc4i")
+script = ExtResource("1_3yorv")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." groups=["Player"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
