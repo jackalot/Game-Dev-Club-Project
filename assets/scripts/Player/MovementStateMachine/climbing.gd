@@ -1,8 +1,10 @@
 extends EntityState
 
-#TODO: Update this when the "Climbing Area" scaling is fixed
-const RAY_LENGTH : float = 40
-const CLIMB_OVER_DISTANCE : float = 1.05	# How far forward the player will be teleported after the climb is complete
+@export_category("Climbing Raycasts")
+@export var upper_raycast : RayCast3D
+@export var lower_raycast : RayCast3D
+# Where the player will be after the ledge
+@export var landing_raycast : RayCast3D
 
 var player : Player
 
@@ -29,27 +31,23 @@ func _process(delta: float) -> void:
 		new_vertical_velocity.y = -player.current_climb_speed * delta
 		player.add_noise(5)
 	
-	player.velocity = new_vertical_velocity
-	
+	if is_ledge_detected():
+		landing_raycast.enabled = true
+		landing_raycast.force_raycast_update()
+		if landing_raycast.is_colliding():
+			# TODO: Replace the teleport with an actual animation
+			player.position = landing_raycast.get_collision_point()
+			SignalBus.changed_state.emit(state_machine_id, "IDLE")
+		landing_raycast.enabled = false
+			
 	# If after the move, the player is on the floor and is trying to climb down
-	if not player.can_climb or new_vertical_velocity.y < 0 and player.is_on_floor():
-		climb_over()
+	if not player.can_climb or player.is_on_floor() and sign(new_vertical_velocity.y) == -1:
 		SignalBus.changed_state.emit(state_machine_id, "IDLE")
+	
+	player.velocity = new_vertical_velocity
 
-# Shift the player model so it is on top of the object is has climbed
-func climb_over() -> void:
-	var ray_start_pos : Vector3 = player.position
-	var ray_direction : Vector3 = Vector3.DOWN
-	
-	ray_start_pos.z -= CLIMB_OVER_DISTANCE
-	
-	# Raycast query the distance in front of the character to find the new floor
-	var space_state = player.get_world_3d().direct_space_state
-	var query = PhysicsRayQueryParameters3D.create(ray_start_pos, ray_start_pos + (ray_direction * RAY_LENGTH),
-		player.collision_mask, [player])
-		
-	var result = space_state.intersect_ray(query)
-	if result:
-		player.position = result.position
-		player.velocity = Vector3.ZERO	# The player could fling themselves forward without this.
-		
+# Returns if the character is on a ledge.
+func is_ledge_detected() -> bool:
+	if !upper_raycast.is_colliding() and lower_raycast.is_colliding():
+		return true
+	return false

@@ -19,8 +19,26 @@ script = ExtResource("1_3yorv")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 shape = SubResource("CapsuleShape3D_ogqes")
 
-[node name="Texture plane" parent="." instance=ExtResource("2_qrc4i")]
+[node name="BodyRoot" type="Node3D" parent="."]
+
+[node name="ClimbingRayCastRoot" type="Node3D" parent="BodyRoot"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="ClimbingRayUpper" type="RayCast3D" parent="BodyRoot/ClimbingRayCastRoot"]
+target_position = Vector3(0, 0, -1.5)
+
+[node name="ClimbingRayLower" type="RayCast3D" parent="BodyRoot/ClimbingRayCastRoot"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.3566352, 0)
+target_position = Vector3(0, 0, -1.1)
+
+[node name="Texture plane" parent="BodyRoot" instance=ExtResource("2_qrc4i")]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 1, 0)
+skeleton = NodePath("../..")
+
+[node name="ClimbLocationRay" type="RayCast3D" parent="BodyRoot/Texture plane"]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, -1.5, -1.5)
+visible = false
+target_position = Vector3(0, -3, 0)
 
 [node name="MovementStateMachine" parent="." node_paths=PackedStringArray("entity", "starting_state") instance=ExtResource("3_hkmy7")]
 id = "Movement"
@@ -31,6 +49,9 @@ starting_state = NodePath("Idle")
 
 [node name="Falling" parent="MovementStateMachine" instance=ExtResource("5_3yorv")]
 
-[node name="Climbing" parent="MovementStateMachine" instance=ExtResource("6_6oc7p")]
+[node name="Climbing" parent="MovementStateMachine" node_paths=PackedStringArray("upper_raycast", "lower_raycast", "landing_raycast") instance=ExtResource("6_6oc7p")]
+upper_raycast = NodePath("../../BodyRoot/ClimbingRayCastRoot/ClimbingRayUpper")
+lower_raycast = NodePath("../../BodyRoot/ClimbingRayCastRoot/ClimbingRayLower")
+landing_raycast = NodePath("../../BodyRoot/Texture plane/ClimbLocationRay")
 
 [node name="Crawling" parent="MovementStateMachine" instance=ExtResource("7_o7d0l")]
