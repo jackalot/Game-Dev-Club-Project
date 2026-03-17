@@ -12,8 +12,9 @@
 radius = 1.0043945
 height = 2.008789
 
-[node name="Player" type="CharacterBody3D" groups=["Player"]]
+[node name="Player" type="CharacterBody3D" node_paths=PackedStringArray("throw_hand") groups=["Player"]]
 script = ExtResource("1_3yorv")
+throw_hand = NodePath("ThrowHand")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." groups=["Player"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
@@ -39,6 +40,9 @@ skeleton = NodePath("../..")
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, -1.5, -1.5)
 visible = false
 target_position = Vector3(0, -3, 0)
+
+[node name="ThrowHand" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0759354, 1.9553523, 0)
 
 [node name="MovementStateMachine" parent="." node_paths=PackedStringArray("entity", "starting_state") instance=ExtResource("3_hkmy7")]
 id = "Movement"

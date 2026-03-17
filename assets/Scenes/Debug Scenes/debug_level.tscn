@@ -1,9 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://dp05i45oo3l2k"]
+[gd_scene load_steps=10 format=3 uid="uid://dp05i45oo3l2k"]
 
 [ext_resource type="PackedScene" uid="uid://dl2xpbavycnmk" path="res://assets/Scenes/Character Scenes/player.tscn" id="1_es4wb"]
 [ext_resource type="Texture2D" uid="uid://dksyyfaelo728" path="res://assets/Art/textures/debug Textures/tex_DebugAlignment.png" id="2_tetbm"]
 [ext_resource type="Texture2D" uid="uid://21kkjsaqkbsf" path="res://assets/Art/textures/debug Textures/tex_DebugUVTiles.png" id="3_tetbm"]
 [ext_resource type="PackedScene" uid="uid://fuanx1tqxnll" path="res://assets/Scenes/Debug Scenes/debug_climbable.tscn" id="4_aqniv"]
+[ext_resource type="PackedScene" uid="uid://cxvsesul0fntw" path="res://assets/Scenes/ThrowableScenes/throwable.tscn" id="5_u5h1b"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h2o6k"]
 albedo_texture = ExtResource("2_tetbm")
@@ -94,3 +95,17 @@ light_energy = 16.0
 shadow_enabled = true
 spot_range = 56.023094
 spot_angle = 43.59375
+
+[node name="ThrowableObjectsRoot" type="Node3D" parent="."]
+
+[node name="Throwable" parent="ThrowableObjectsRoot" instance=ExtResource("5_u5h1b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.6726165, 0, 0)
+
+[node name="Throwable2" parent="ThrowableObjectsRoot" instance=ExtResource("5_u5h1b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.8514063, 0, -3.6507142)
+
+[node name="Throwable3" parent="ThrowableObjectsRoot" instance=ExtResource("5_u5h1b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -8.802393)
+
+[node name="Throwable4" parent="ThrowableObjectsRoot" instance=ExtResource("5_u5h1b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.0612535)
